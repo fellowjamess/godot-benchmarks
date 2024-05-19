@@ -30,9 +30,9 @@
   </div>
 
   <h2>Latest benchmark runs</h2>
-  <ul>
+  <ul class="benchmark-list">
     {{ range sort $benchmarks ".date" "asc" | first 100}}
-      <li>
+      <li class="benchmark-item">
         <a href="/benchmark/{{ .date }}_{{ .commit }}">{{ .date }}<code>{{ slicestr .engine.version_hash 0 9 }}</code></a>
       </li>
     {{ end }}
